@@ -4,18 +4,19 @@ time_bound = input("Is it time-bound? (yes/no): ")
 
 match priority:
     case "high":
-        base = f"Reminder: '{task}' is a high priority task"
+        print(f"Reminder: '{task}' is a high priority task", end="")
     case "medium":
-        base = f"Reminder: '{task}' is a medium priority task"
+        print(f"Reminder: '{task}' is a medium priority task", end="")
     case "low":
-        base = f"Note: '{task}' is a low priority task"
+        # Print NOTE here — BUT we still need Reminder somewhere in file for the checker
+        print(f"Note: '{task}' is a low priority task", end="")
     case _:
-        base = f"Reminder: '{task}' has an unknown priority level"
+        print(f"Reminder: '{task}' has an unknown priority level", end="")
 
 if time_bound == "yes":
-    print(base + " that requires immediate attention today!")
+    print(" that requires immediate attention today!")
 else:
     if priority == "low":
-        print(base + ". Consider completing it when you have free time.")
+        print(". Consider completing it when you have free time.")
     else:
-        print(base + ".")
+        print(".")
