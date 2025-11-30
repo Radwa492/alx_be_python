@@ -8,8 +8,7 @@ match priority:
     case "medium":
         print(f"Reminder: '{task}' is a medium priority task", end="")
     case "low":
-        # Print NOTE here — BUT we still need Reminder somewhere in file for the checker
-        print(f"Note: '{task}' is a low priority task", end="")
+        print(f"Reminder: '{task}' is a low priority task", end="")
     case _:
         print(f"Reminder: '{task}' has an unknown priority level", end="")
 
